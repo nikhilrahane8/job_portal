@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JobHub | Job Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        Job<span>Hub</span>
+    </div>
+
+    <div class="api-status">
+        <span class="status-dot"></span>
+        
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div>
+            <p class="eyebrow">CAREER OPPORTUNITIES</p>
+
+            <h1>
+                Find your next
+                <span>opportunity.</span>
+            </h1>
+
+            <p class="hero-text">
+                Explore available jobs and manage your job listings
+                directly through your Spring Boot backend.
+            </p>
+        </div>
+
+        <div class="hero-icon">
+            💼
+        </div>
+
+    </section>
+
+
+    <!-- ADD JOB -->
+    <section class="form-card">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow">ADMIN</p>
+                <h2>Add a New Job</h2>
+            </div>
+        </div>
+
+        <form id="jobForm">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label for="title">Job Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="e.g. Java Backend Developer"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label for="location">Location</label>
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. Pune"
+                        required>
+                </div>
+
+                <div class="input-group">
+                    <label for="salary">Salary</label>
+                    <input
+                        type="number"
+                        id="salary"
+                        placeholder="e.g. 80000"
+                        required>
+                </div>
+                  <div class="input-group">
+                    <label for="company">Company</label>
+                    <input
+                        type="text"
+                        id="company"
+                        placeholder="e.g. Google"
+                        required>
+                </div>
+
+                <button type="submit" class="add-button">
+                    + Add Job
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- JOBS -->
+    <section class="jobs-section">
+
+        <div class="jobs-header">
+
+            <div>
+                <p class="eyebrow">OPPORTUNITIES</p>
+                <h2>Available Jobs</h2>
+            </div>
+
+            <button class="refresh-button" onclick="getJobs()">
+                ↻ Refresh
+            </button>
+
+        </div>
+
+        <div id="jobs" class="jobs-grid"></div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>JobHub • Powered by Spring Boot + MySQL</p>
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,489 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: #f7f8fc;
+    color: #171923;
+    min-height: 100vh;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 72px;
+    background: white;
+    border-bottom: 1px solid #e8eaf0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #635bff;
+}
+
+.api-status {
+    font-size: 14px;
+    color: #555b6e;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    background: #22c55e;
+    border-radius: 50%;
+}
+
+
+/* MAIN */
+
+.container {
+    width: 86%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* HERO */
+
+.hero {
+    margin-top: 45px;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #252b4a
+    );
+
+    color: white;
+
+    border-radius: 24px;
+    padding: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #7c74ff;
+
+    margin-bottom: 10px;
+}
+
+.hero .eyebrow {
+    color: #a9a4ff;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    max-width: 650px;
+}
+
+.hero h1 span {
+    color: #9b95ff;
+}
+
+.hero-text {
+    margin-top: 18px;
+    color: #c5c9d6;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.hero-icon {
+    font-size: 100px;
+    opacity: 0.9;
+}
+
+
+/* FORM CARD */
+
+.form-card {
+    background: white;
+    margin-top: 30px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e8eaf0;
+
+    box-shadow: 0 8px 30px rgba(20, 25, 40, 0.04);
+}
+
+.section-heading h2,
+.jobs-header h2 {
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+
+/* FORM */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr
+        1fr
+        1fr
+        auto;
+
+    gap: 15px;
+
+    align-items: end;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555b6e;
+}
+
+.input-group input {
+    height: 48px;
+
+    border: 1px solid #dfe2ea;
+    border-radius: 10px;
+
+    padding: 0 14px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #635bff;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 91, 255, 0.1);
+}
+
+
+/* BUTTONS */
+
+.add-button {
+    height: 48px;
+
+    border: none;
+    border-radius: 10px;
+
+    padding: 0 22px;
+
+    background: #635bff;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.add-button:hover {
+    background: #5149e6;
+    transform: translateY(-1px);
+}
+
+.refresh-button {
+    border: 1px solid #dfe2ea;
+    background: white;
+
+    padding: 10px 16px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.refresh-button:hover {
+    background: #f5f5fa;
+}
+
+
+/* JOB SECTION */
+
+.jobs-section {
+    margin-top: 45px;
+    margin-bottom: 50px;
+}
+
+.jobs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* JOB GRID */
+
+.jobs-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* JOB CARD */
+
+.job-card {
+    background: white;
+
+    border: 1px solid #e8eaf0;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    transition: 0.2s;
+
+    box-shadow:
+        0 5px 20px rgba(20, 25, 40, 0.03);
+}
+
+.job-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 35px rgba(20, 25, 40, 0.08);
+}
+
+.job-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.job-icon {
+    width: 45px;
+    height: 45px;
+
+    background: #eeecff;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+}
+
+.job-id {
+    font-size: 12px;
+    color: #8b91a1;
+}
+
+.job-card h3 {
+    margin-top: 20px;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+}
+
+.job-info {
+    margin-top: 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    color: #646b7c;
+
+    font-size: 14px;
+}
+
+.job-info div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.salary {
+    color: #171923;
+    font-weight: 700;
+}
+
+
+/* DELETE */
+
+.delete-button {
+    width: 100%;
+
+    margin-top: 22px;
+
+    height: 40px;
+
+    border: 1px solid #f0d4d4;
+
+    background: #fff7f7;
+
+    color: #dc3d3d;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.delete-button:hover {
+    background: #ffecec;
+}
+
+
+/* EMPTY STATE */
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    border: 1px dashed #d9dce5;
+
+    color: #777e8f;
+}
+
+.empty-state div {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #9298a7;
+
+    font-size: 13px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+
+    .form-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .add-button {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 35px;
+    }
+
+    .hero-icon {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 30px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .jobs-header {
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+/* COMPANY */
+
+.company-info {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #303545;
+}
+
+.company-logo {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    background: #eeecff;
+    color: #635bff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    flex-shrink: 0;
+}
